@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US" dir="ltr">
 <? include('../layout/header.php'); ?>
+
 <body data-sidebar="menuNewSpeaker">
 
     <!-- ===============================================-->
@@ -16,8 +17,8 @@
             <div class="content">
                 <nav class="mb-2" aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0">
-                      <li class="breadcrumb-item"><a href="../home/">Home</a></li>
-                      <li class="breadcrumb-item"><a href="../speakers/">Speakers</a></li>
+                        <li class="breadcrumb-item"><a href="../home/">Home</a></li>
+                        <li class="breadcrumb-item"><a href="../speakers/">Speakers</a></li>
                         <li class="breadcrumb-item active">New</li>
                     </ol>
                 </nav>
@@ -32,18 +33,33 @@
                             <a id="publishSpeaker" class="btn btn-primary mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="check"></i> Publish speaker</a>
                         </div>
                     </div>
-                    <h4 class="mb-3">Name</h4>
                     <div class="row g-5">
                         <div class="col-12 col-xl-8">
-                            <input id="speaker_name" name="speaker_name" class="form-control mb-5" type="text" placeholder="Write the name here..." />
+
+                            <div class="row">
+                                <div class="col-12">
+                                    <h4 class="mb-3">Name</h4>
+                                    <input id="speaker_name" name="speaker_name" class="form-control mb-5" type="text" placeholder="Write the name here..." />
+                                </div>
+
+                                <div class="col-md-8 mb-5">
+                                    <h4 class="mb-2">Speaker titles</h4>
+                                    <input id="speaker_titles" name="speaker_titles" class="form-control mb-0" type="text" placeholder="e.g. Author, Psychologist, etc..." />
+                                    <small>Add titles separate with coma (,)</small>
+                                </div>
+
+                                <div class="col-md-4 mb-5">
+                                    <h4 class="mb-2">Pronouns</h4>
+                                    <input id="speaker_titles" name="speaker_titles" class="form-control mb-0" type="text" placeholder="e.g. She/Her" />
+                                    <small>Add pronouns separate with diagonal (/)</small>
+                                </div>
+                            </div>
+
+
+
                             <div class="mb-6">
                                 <h4 class="mb-3"> Speaker description</h4>
                                 <textarea class="tinymce" id="speaker_description" name="speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'></textarea>
-                            </div>
-
-                            <div class="mb-6">
-                                <h4 class="mb-3"> Topics abstract</h4>
-                                <textarea class="form-control" id="speaker_topics_abs" name="speaker_topics_abs" rows="4" cols="80" placeholder="Topics:"></textarea>
                             </div>
 
                             <div class="mb-6">
@@ -53,17 +69,9 @@
 
 
                                         <div class="nav flex-sm-column border-bottom border-bottom-sm-0 border-end-sm border-300 fs--1 vertical-tab h-100 justify-content-between" role="tablist" aria-orientation="vertical">
-                                            <a class="nav-link border-end border-end-sm-0 border-bottom-sm border-300 text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center active" id="topicsTab" data-bs-toggle="tab" data-bs-target="#topicsTabContent" role="tab" aria-controls="topicsTabContent" aria-selected="true">
-                                                <span class="me-sm-2 fs-4 nav-icons" data-feather="award"></span>
-                                                <span class="d-none d-sm-inline">Topics</span>
-                                            </a>
-                                            <a class="nav-link border-end border-end-sm-0 border-bottom-sm border-300 text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center" id="videosTab" data-bs-toggle="tab" data-bs-target="#videosTabContent" role="tab" aria-controls="videosTabContent" aria-selected="false">
+                                            <a class="nav-link border-end border-end-sm-0 border-bottom-sm border-300 text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center active" id="videosTab" data-bs-toggle="tab" data-bs-target="#videosTabContent" role="tab" aria-controls="videosTabContent" aria-selected="false">
                                                 <span class="me-sm-2 fs-4 nav-icons" data-feather="play-circle"></span>
                                                 <span class="d-none d-sm-inline">Videos</span>
-                                            </a>
-                                            <a class="nav-link border-end border-end-sm-0 border-bottom-sm border-300 text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center" id="servicesTab" data-bs-toggle="tab" data-bs-target="#servicesTabContent" role="tab" aria-controls="servicesTabContent" aria-selected="false">
-                                                <span class="me-sm-2 fs-4 nav-icons" data-feather="list"></span>
-                                                <span class="d-none d-sm-inline">Services</span>
                                             </a>
                                             <a class="nav-link text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center" id="testimonialsTab" data-bs-toggle="tab" data-bs-target="#testimonialsTabContent" role="tab" aria-controls="testimonialsTabContent" aria-selected="false">
                                                 <span class="me-sm-2 fs-4 nav-icons" data-feather="message-square"></span>
@@ -74,16 +82,9 @@
 
                                     </div>
                                     <div class="col-sm-8">
-                                        <div class="tab-content py-3 ps-sm-4 h-100">
-                                            <div class="tab-pane fade show active" id="topicsTabContent" role="tabpanel">
-                                                <h4 class="mb-3 d-sm-none">Topics</h4>
-                                                <div class="">
+                                        <div class="tab-content py-3 ps-sm-4 ">
 
-                                                    <textarea class="tinymce" id="speaker_topics" name="speaker_topics" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'></textarea>
-
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade h-100 pe-3" id="videosTabContent" role="tabpanel" aria-labelledby="videosTab">
+                                            <div class="tab-pane fade h-100 show active pe-3" id="videosTabContent" role="tabpanel" aria-labelledby="videosTab">
                                                 <div class="d-flex flex-column h-100">
                                                     <div class="d-flex flex-row justify-content-between align-items-center">
                                                         <h5 class="m-0 text-1000">Add the iframe code</h5>
@@ -95,13 +96,6 @@
                                                             <a href="javascript:void(0);" class="btn btn-soft-danger remove-video" type="button"><span class="fa-solid fa-trash fs--"></span></a>
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade h-100" id="servicesTabContent" role="tabpanel" aria-labelledby="servicesTab">
-                                                <div class="d-flex flex-column h-100">
-
-                                                    <textarea class="tinymce" id="speaker_services" name="speaker_services" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'></textarea>
-
                                                 </div>
                                             </div>
 
@@ -169,20 +163,33 @@
                                             <h4 class="card-title mb-4">Information</h4>
                                             <div class="row g-3">
                                                 <div class="col-12 col-sm-6 col-xl-12">
-                                                    <div class="mb-xl-4">
-                                                        <h5 class="mb-2 text-1000">Tags</h5>
-                                                        <select id="speaker_tags" name="speaker_tags" class="form-control form-control-sm select2-tags" multiple="multiple" style="width:100%;"></select>
-                                                        <small>Add tags separate with coma (,). This tags will be appear under speaker photo</small>
+                                                    <h5 class="mb-2 text-1000">Price range</h5>
+                                                    <div class="row g-3">
+                                                        <div class="col-6">
+                                                            <div class="input-group mb-3">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-dollar-sign"></i></span>
+                                                                <input type="text" class="form-control" id="price_from" name="price_from" placeholder="From:" aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group mb-3">
+                                                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-dollar-sign"></i></span>
+                                                                <input type="text" class="form-control" id="price_to" name="price_to" placeholder="To:" aria-describedby="basic-addon1">
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-6 col-xl-12">
-                                                    <div class="mb-4">
-                                                        <div class="d-flex flex-wrap mb-2">
-                                                            <h5 class="mb-0 text-1000 me-2">Quote</h5>
-                                                        </div>
-                                                        <textarea class="form-control" id="speaker_quote" name="speaker_quote" rows="4" cols="80"></textarea>
-                                                        <small>Without the quotes.</small>
+                                                    <h5 class="mb-2 text-1000">Tags</h5>
+                                                    <select id="speaker_tags" name="speaker_tags" class="form-control form-control-sm select2-tags" multiple="multiple" style="width:100%;"></select>
+                                                    <small>Add tags separate with coma (,). This tags will be appear under speaker photo</small>
+                                                </div>
+                                                <div class="col-12 col-sm-6 col-xl-12">
+                                                    <div class="d-flex flex-wrap mb-2">
+                                                        <h5 class="mb-0 text-1000 me-2">Quote</h5>
                                                     </div>
+                                                    <textarea class="form-control" id="speaker_quote" name="speaker_quote" rows="4" cols="80"></textarea>
+                                                    <small>Without the quotes.</small>
                                                 </div>
                                             </div>
                                         </div>
@@ -247,7 +254,7 @@
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
     <script type="text/javascript">
-        $(document).ready( function(){
+        $(document).ready(function() {
             $(".select2-tags").select2({
                 tags: true,
                 tokenSeparators: [',']

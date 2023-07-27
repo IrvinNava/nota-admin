@@ -53,7 +53,7 @@ table.dataTable.table-hover>tbody>tr:hover>* {
     padding: 1rem !important;
     height: 100%;
     border-width: 1px;
-    border-bottom: 1px solid ##e3e6ed;
+    border-bottom: 1px solid #e3e6ed;
 }
 /* Drag&Drop */
 .draggable-container {
@@ -195,8 +195,8 @@ textarea::-webkit-scrollbar-thumb:hover {
     right: -1px;
 }
 .tab-content .tab-pane {
-    min-height: 280px;
-    max-height: 280px;
+    min-height: 208px;
+    max-height: 208px;
     overflow: auto;
 }
 /* SELECT2 TABS */

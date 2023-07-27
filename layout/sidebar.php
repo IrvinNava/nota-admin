@@ -84,20 +84,44 @@
 
                 <li class="nav-item">
                     <!-- label-->
-                    <p class="navbar-vertical-label">Workshops</p>
+                    <p class="navbar-vertical-label">Experiences</p>
                     <hr class="navbar-vertical-line" />
                     <!-- item-->
                     <div class="nav-item-wrapper">
                         <a id="menuWorkshop" class="nav-link label-1" href="../in-construction/" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center">
-                                <span class="nav-link-icon"><span data-feather="users"></span></span>
-                                <span class="nav-link-text-wrapper"><span class="nav-link-text">Workshops</span></span>
+                                <span class="nav-link-icon"><span data-feather="box"></span></span>
+                                <span class="nav-link-text-wrapper"><span class="nav-link-text">Experiences</span></span>
                             </div>
                         </a>
                     </div>
                     <!-- item-->
                     <div class="nav-item-wrapper">
                         <a id="menuNewWorkshop" class="nav-link label-1" href="../in-construction/" role="button" data-bs-toggle="" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"><span data-feather="plus-circle"></span></span>
+                                <span class="nav-link-text-wrapper"><span class="nav-link-text">New</span></span>
+                            </div>
+                        </a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <!-- label-->
+                    <p class="navbar-vertical-label">Collections</p>
+                    <hr class="navbar-vertical-line" />
+                    <!-- item-->
+                    <div class="nav-item-wrapper">
+                        <a id="menuWorkshop" class="nav-link label-1" href="../collections/" role="button" data-bs-toggle="" aria-expanded="false">
+                            <div class="d-flex align-items-center">
+                                <span class="nav-link-icon"><span data-feather="folder"></span></span>
+                                <span class="nav-link-text-wrapper"><span class="nav-link-text">Collections</span></span>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- item-->
+                    <div class="nav-item-wrapper">
+                        <a id="menuNewWorkshop" class="nav-link label-1" href="../add-collection/" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><span data-feather="plus-circle"></span></span>
                                 <span class="nav-link-text-wrapper"><span class="nav-link-text">New</span></span>
