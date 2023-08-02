@@ -27,7 +27,7 @@
                         <div class="mb-2">
                             <div class="row g-3">
                                 <div class="col-auto flex-grow-1">
-                                    <ul class="nav nav-links mb-3 mb-lg-2 mx-n3">
+                                    <ul class="nav nav-links mb-3 mb-lg-2 mx-n3 proposals-buttons">
                                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Generated <span class="text-700 fw-semi-bold">(120)</span></a></li>
                                         <li class="nav-item"><a class="nav-link" href="../proposals-requested/">Requested <span class="text-700 fw-semi-bold">(20)</span></a></li>
                                     </ul>
