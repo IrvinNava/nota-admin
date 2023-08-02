@@ -1,266 +1,234 @@
 <!DOCTYPE html>
-<html lang="en-US" dir="ltr">
-<? include('../layout/header.php'); ?>
-<body data-sidebar="">
+<html lang="en" dir="ltr">
 
-    <!-- ===============================================-->
-    <!--    Main Content-->
-    <!-- ===============================================-->
-    <main class="main" id="top">
-        <div class="container-fluid px-0">
-            <!-- Sidebar -->
-            <? include('../layout/sidebar.php'); ?>
-            <!-- Topbar -->
-            <? include('../layout/topbar.php'); ?>
+<head>
+   <meta charset="utf-8">
+   <meta content="width=device-width, initial-scale=1.0" name="viewport">
+   <meta content="" name="description">
+   <meta content="" name="keywords">
+   <title>Talent | Nota Inclusion</title>
+   <?php include "../layout/header.php"; ?>
+</head>
 
-            <div class="content">
-                <nav class="mb-2" aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0">
-                      <li class="breadcrumb-item"><a href="../home/">Home</a></li>
-                      <li class="breadcrumb-item"><a href="../speakers/">Speakers</a></li>
-                        <li class="breadcrumb-item active">Ingrid Harb</li>
-                    </ol>
-                </nav>
-                <form class="mb-9 mt-3">
-                    <div class="row g-3 flex-between-end mb-5">
-                        <div class="col-auto">
-                            <h2 class="mb-2">Ingrid Harb</h2>
-                            <h5 class="text-700 fw-semi-bold">Nota's speaker</h5>
-                        </div>
-                        <div class="col-auto">
-                            <a id="discardSpeaker" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0"><i class="fas fa-trash me-1"></i> Delete</a>
-                            <a id="saveSpeaker" class="btn btn-primary mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="check"></i> Save</a>
-                        </div>
-                    </div>
-                    <h4 class="mb-3">Name</h4>
-                    <div class="row g-5">
-                        <div class="col-12 col-xl-8">
-                            <input class="form-control mb-5" type="text" value="Ingrid Harb" />
-                            <div class="mb-6">
-                                <h4 class="mb-3"> Speaker description</h4>
-                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'>Ingrid never really fit in a box or category. She was born and raised in Mexico and then went to Texas for boarding school. So at time, she was too Mexican for the norms of an American boarding school. And in returning to Mexico, she was almost too American for her Mexican colleagues. Either she was Mexican or she was an American.</textarea>
-                            </div>
+<body>
 
-                            <div class="mb-6">
-                                <h4 class="mb-3"> Topics abstract</h4>
-                                <textarea class="form-control" id="edit_speaker_topics_abs" name="edit_speaker_topics_abs" rows="4" cols="80" placeholder="Topics:">Overcoming Limiting Beliefs, Career Mapping, Building Resilience, Empowering Latinas</textarea>
-                            </div>
+   <?php include "../layout/topbar.php"; ?>
 
-                            <div class="mb-6">
-                                <h4 class="mb-3">Information</h4>
-                                <div class="row g-0 border-top border-bottom border-300">
-                                    <div class="col-sm-4">
-
-
-                                        <div class="nav flex-sm-column border-bottom border-bottom-sm-0 border-end-sm border-300 fs--1 vertical-tab h-100 justify-content-between" role="tablist" aria-orientation="vertical">
-                                            <a class="nav-link border-end border-end-sm-0 border-bottom-sm border-300 text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center active" id="topicsTab" data-bs-toggle="tab" data-bs-target="#topicsTabContent" role="tab" aria-controls="topicsTabContent" aria-selected="true">
-                                                <span class="me-sm-2 fs-4 nav-icons" data-feather="award"></span>
-                                                <span class="d-none d-sm-inline">Topics</span>
-                                            </a>
-                                            <a class="nav-link border-end border-end-sm-0 border-bottom-sm border-300 text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center" id="videosTab" data-bs-toggle="tab" data-bs-target="#videosTabContent" role="tab" aria-controls="videosTabContent" aria-selected="false">
-                                                <span class="me-sm-2 fs-4 nav-icons" data-feather="play-circle"></span>
-                                                <span class="d-none d-sm-inline">Videos</span>
-                                            </a>
-                                            <a class="nav-link border-end border-end-sm-0 border-bottom-sm border-300 text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center" id="servicesTab" data-bs-toggle="tab" data-bs-target="#servicesTabContent" role="tab" aria-controls="servicesTabContent" aria-selected="false">
-                                                <span class="me-sm-2 fs-4 nav-icons" data-feather="list"></span>
-                                                <span class="d-none d-sm-inline">Services</span>
-                                            </a>
-                                            <a class="nav-link text-center text-sm-start cursor-pointer outline-none d-sm-flex align-items-sm-center" id="testimonialsTab" data-bs-toggle="tab" data-bs-target="#testimonialsTabContent" role="tab" aria-controls="testimonialsTabContent" aria-selected="false">
-                                                <span class="me-sm-2 fs-4 nav-icons" data-feather="message-square"></span>
-                                                <span class="d-none d-sm-inline">Testimonials</span>
-                                            </a>
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-sm-8">
-                                        <div class="tab-content py-3 ps-sm-4 h-100">
-                                            <div class="tab-pane fade show active" id="topicsTabContent" role="tabpanel">
-                                                <h4 class="mb-3 d-sm-none">Topics</h4>
-                                                <div class="">
-
-                                                    <textarea class="tinymce" id="edit_speaker_topics" name="edit_speaker_topics" data-tinymce='{"height":"15rem","placeholder":"Write the topics here..."}'></textarea>
-
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade h-100 pe-3" id="videosTabContent" role="tabpanel" aria-labelledby="videosTab">
-                                                <div class="d-flex flex-column h-100">
-                                                    <div class="d-flex flex-row justify-content-between align-items-center">
-                                                        <h5 class="m-0 text-1000">Add the iframe code</h5>
-                                                        <a id="addVideoBtn" href="javascript:void(0);" class="btn btn-sm btn-primary"><span class="fa-solid fa-plus fs--2"></span></a>
-                                                    </div>
-                                                    <div id="videosList" class="mt-3">
-                                                        <div class="video-item mb-2">
-                                                            <textarea class="form-control video-textarea speaker-item-video" name="speaker_item_video" rows="4"></textarea>
-                                                            <a href="javascript:void(0);" class="btn btn-soft-danger remove-video" type="button"><span class="fa-solid fa-trash fs--"></span></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="tab-pane fade h-100" id="servicesTabContent" role="tabpanel" aria-labelledby="servicesTab">
-                                                <div class="d-flex flex-column h-100">
-
-                                                    <textarea class="tinymce" id="edit_speaker_services" name="edit_speaker_services" data-tinymce='{"height":"15rem","placeholder":"Write the services here..."}'></textarea>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="tab-pane fade pe-3" id="testimonialsTabContent" role="tabpanel" aria-labelledby="testimonialsTab">
-                                                <div class="d-flex flex-row justify-content-between align-items-center">
-                                                    <h5 class="m-0 text-1000">Add testimonial</h5>
-                                                    <a id="addTestimonialsBtn" href="javascript:void(0);" class="btn btn-sm btn-primary"><span class="fa-solid fa-plus fs--2"></span></a>
-                                                </div>
-                                                <div id="testimonialsList" class="mt-3">
-                                                    <div class="card p-2 testimonial-item mb-2">
-                                                        <textarea class="form-control" name="speaker_item_testimonial" rows="4" cols="80" placeholder="Testimonial text..."></textarea>
-                                                        <input type="text" name="speaker_item_author" class="form-control" placeholder="Testimonial autor">
-                                                        <a href="javascript:void(0);" class="btn btn-soft-danger remove-testimonial" type="button"><span class="fa-solid fa-trash fs--"></span></a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="mb-6">
-                                <h4 class="mb-3"> Categories</h4>
-                                <select class="form-select select2" id="edit_speaker_categories" name="edit_speaker_categories[]" multiple="multiple" style="width:100%;">
-                                    <option value="" selected>DE&I (Diversity, Equity, & Inclusion)</option>
-                                    <option value="">Racial Equity</option>
-                                    <option value="" selected>Mental Health</option>
-                                    <option value="">Disability Awareness</option>
-                                    <option value="">Intersectionality</option>
-                                    <option value="">Allyship</option>
-                                    <option value="">Development</option>
-                                    <option value="">Leadership</option>
-                                    <option value="">LGBTQIA+ Pride Month</option>
-                                    <option value="">Women's History Month</option>
-                                    <option value="" selected>Black History Month</option>
-                                    <option value="">Hispanic Heritage Month</option>
-                                    <option value="">Asian American and Pacific Island Heritage Month</option>
-                                    <option value="">Military Family Month</option>
-                                    <option value="">Breast Cancer Awareness Month</option>
-                                    <option value="">Micro-aggressions</option>
-                                    <option value="">Juneteenth</option>
-                                    <option value="">Unconscious Bias</option>
-                                    <option value="">Arab Heritage Month</option>
-                                    <option value="">Social Activism</option>
-                                    <option value="">Empathy in the Workplace</option>
-                                    <option value="">National Native American Heritage Month</option>
-                                    <option value="">Female Empowerment</option>
-                                    <option value="">Women in Leadership</option>
-                                    <option value="">Self-love</option>
-                                    <option value="">Healing</option>
-                                    <option value="">Health and wellness</option>
-                                    <option value="">Workplace and Employee wellness</option>
-                                    <option value="">Business leadership + management</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-12 col-xl-4">
-                            <div class="row g-2">
-                                <div class="col-12 col-xl-12">
-                                    <div class="card mb-3">
-                                        <div class="card-body">
-                                            <h4 class="card-title mb-4">Information</h4>
-                                            <div class="row g-3">
-                                                <div class="col-12 col-sm-6 col-xl-12">
-                                                    <div class="mb-xl-4">
-                                                        <h5 class="mb-2 text-1000">Tags</h5>
-                                                        <select id="edit_speaker_tags" name="edit_speaker_tags" class="form-control form-control-sm select2-tags" multiple="multiple" style="width:100%;">
-                                                            <option value="" selected>TEDx Speaker</option>
-                                                            <option value="" selected>Founder and CEO</option>
-                                                            <option value="" selected>Global DE&I leader</option>
-                                                            <option value="" selected>Consultant</option>
-                                                            <option value="" selected>Keynote Speaker</option>
-                                                        </select>
-                                                        <small>Add tags separate with coma (,). This tags will be appear under speaker photo</small>
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-12 col-sm-6 col-xl-12">
-                                                    <div class="">
-                                                        <div class="d-flex flex-wrap mb-2">
-                                                            <h5 class="mb-0 text-1000 me-2">Quote</h5>
-                                                        </div>
-                                                        <textarea class="form-control" id="edit_speaker_quote" name="edit_speaker_quote" rows="6" cols="80">I was born to change the narrative and as long as I live, I will continue to empower women internationally and locally to pursue their career goals regardless of social, economic, racial or cultural background.</textarea>
-                                                        <small>Without the quotes.</small>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Photo -->
-                                <div class="col-12 col-xl-12">
-                                    <div class="card">
-                                        <div class="card-body">
-                                            <h4 class="card-title mb-4">Speaker photo</h4>
-                                            <div class="dropzone dropzone-multiple p-0 mb-5" id="my-awesome-dropzone" data-dropzone="data-dropzone">
-                                                <div class="fallback">
-                                                    <input id="edit_speaker_photo" name="edit_speaker_photo" type="file" multiple="multiple" />
-                                                </div>
-                                                <div class="dz-preview d-flex flex-wrap">
-                                                    <div class="border bg-white rounded-3 d-flex flex-center position-relative me-2 mb-2" style="height:80px;width:80px;">
-                                                        <img class="dz-image" src="../../../assets/img/23.png" alt="..." data-dz-thumbnail="data-dz-thumbnail" /><a class="dz-remove text-400" href="#!" data-dz-remove="data-dz-remove"><span data-feather="x"></span></a>
-                                                    </div>
-                                                </div>
-                                                <div class="dz-message text-600 text-center" data-dz-message="data-dz-message">
-                                                    Drag your photo here <span class="text-800">or</span>
-                                                    <button class="btn btn-link p-0" type="button">Browse from device</button><br /><img class="mt-3 me-2" src="../../../assets/img/icons/image-icon.png" width="40" alt="" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </form>
-                <!-- Footer -->
-                <? include('../layout/footer.php'); ?>
+   <main class="speaker-page">
+      <section>
+         <div class="container">
+            <div class="d-flex justify-content-start mb-4">
+               <a href="../talent/" class="go-back-btn"><i class="fa-solid fa-chevron-left me-2"></i> Go Back</a>
             </div>
 
-        </div>
-        <script>
-            var navbarTopStyle = window.config.config.phoenixNavbarTopStyle;
-            var navbarTop = document.querySelector('.navbar-top');
-            if (navbarTopStyle === 'darker') {
-                navbarTop.classList.add('navbar-darker');
+            <div class="row align-items-center">
+               <div class="col-md-3">
+                  <img src="https://notainclusion.com/assets/img/speaker/mark_travis_rivera.png" alt="Mark Travis" class="img-fluid">
+                  <a href="" class="btn btn-lg btn-purple btn-block rounded-pill px-5 mt-3 text-center">Hire this Speaker</a>
+               </div>
+               <div class="col-md-9 speaker-detail-container">
+                  <div class="p-0 p-md-5">
+                     <h1 class="mt-4 mt-sm-0">Mark Travis Rivera <span>(he/him)</span></h1>
+                     <h5><i>Psychologist, Military Veteran</i></h5>
+                     <hr>
+                     <h5>Price range: $3,500 - $7.000</h5>
+                     <h5>Fields of expertise:</h5>
+                     <div class="speaker-tags-container mt-4">
+                        <a href="" class="nota-tag">Black History Month</a>
+                        <a href="" class="nota-tag">DEI Elementals</a>
+                        <a href="" class="nota-tag">Inclusive Leadership</a>
+                        <a href="" class="nota-tag">Black History Month</a>
+                        <a href="" class="nota-tag">DEI Elementals</a>
+                        <a href="" class="nota-tag">Inclusive Leadership</a>
+
+
+                        <!-- <a href="" class="nota-tag">diversity_equity_inclusion</a>
+                     <a href="" class="nota-tag">mental_health</a>
+                     <a href="" class="nota-tag">racial_equity</a>
+                     <a href="" class="nota-tag">intersectionality</a>
+                     <a href="" class="nota-tag">allyship</a>
+                     <a href="" class="nota-tag">leadership_development</a>
+                     
+                     <a href="" class="nota-tag">disability_awareness</a>
+                     <a href="" class="nota-tag">women_history_month</a>
+                     <a href="" class="nota-tag">military_month</a>
+                     <a href="" class="nota-tag">micro_aggressions</a>
+                     <a href="" class="nota-tag">social_activism</a>
+                     <a href="" class="nota-tag">unconscious_bias</a>
+                     
+                     <a href="" class="nota-tag">empathy_workplace</a>
+                     <a href="" class="nota-tag">bussiness_leadership</a>
+                     <a href="" class="nota-tag">female_empowerment</a>
+                     <a href="" class="nota-tag">women_in_leadership</a>
+                     <a href="" class="nota-tag">self_love</a>
+                     <a href="" class="nota-tag">healing</a>
+                     
+                     <a href="" class="nota-tag">health_wellness</a>
+                     <a href="" class="nota-tag">workplace_employee_wellness</a> -->
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <div class="speaker-descroption mt-5">
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum rem deleniti ratione earum praesentium enim modi est dicta, assumenda tempora cupiditate optio alias quos officia nihil et soluta quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum rem deleniti ratione earum praesentium enim modi est dicta, assumenda tempora cupiditate optio alias quos officia nihil et soluta quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum rem deleniti ratione earum praesentium enim modi est dicta, assumenda tempora cupiditate optio alias quos officia nihil et soluta quasi? </p>
+               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum rem deleniti ratione earum praesentium enim modi est dicta, assumenda tempora cupiditate optio alias quos officia nihil et soluta quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum rem deleniti ratione earum praesentium enim modi est dicta, assumenda tempora cupiditate optio alias quos officia nihil et soluta quasi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero harum rem deleniti ratione earum praesentium enim modi est dicta, assumenda tempora cupiditate optio alias quos officia nihil et soluta quasi? </p>
+            </div>
+
+         </div>
+      </section>
+
+      <section class="speaker-video-container py-0 py-sm-5">
+         <div class="container p-0 p-sm-auto">
+            <div class="video-container">
+               <iframe width="560" height="315" src="https://www.youtube.com/embed/_TyJeKKQh-s?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+         </div>
+      </section>
+
+      <section class="pb-0">
+         <div class="container">
+            <h3 class="nota-title mb-5">What our clients say about this speaker</h3>
+         </div>
+         <div class="testimonials-slider-container">
+            <div class="testimonials-carousel">
+
+               <div class="item">
+                  <div class="speaker-testimonial">
+                     <div class="quotes"><i class="fa-solid fa-quote-left fa-2x"></i><i class="fa-solid fa-quote-right fa-2x"></i></div>
+                     <h6 class="testimonials-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque aut aperiam laborum officia ea cupiditate odit odio. Reiciendis quam laboriosam facere commodi id omnis illo provident eos voluptas similique?</h6>
+                     <p class="testimonials-author h6">- Head of Financial Engines</p>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <div class="speaker-testimonial">
+                     <div class="quotes"><i class="fa-solid fa-quote-left fa-2x"></i><i class="fa-solid fa-quote-right fa-2x"></i></div>
+                     <h6 class="testimonials-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque aut aperiam laborum officia ea cupiditate odit odio. Reiciendis quam laboriosam facere commodi id omnis illo provident eos voluptas similique?</h6>
+                     <p class="testimonials-author h6">- ERG Lead at Ubisoft</p>
+                  </div>
+               </div>
+
+               <div class="item">
+                  <div class="speaker-testimonial">
+                     <div class="quotes"><i class="fa-solid fa-quote-left fa-2x"></i><i class="fa-solid fa-quote-right fa-2x"></i></div>
+                     <h6 class="testimonials-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa eaque aut aperiam laborum officia ea cupiditate odit odio. Reiciendis quam laboriosam facere commodi id omnis illo provident eos voluptas similique?</h6>
+                     <p class="testimonials-author h6">- Director of Financials Engines</p>
+                  </div>
+               </div>
+
+            </div>
+         </div>
+         <div class="d-flex justify-content-center">
+            <a href="" class="btn btn-lg btn-purple rounded-pill px-5 mt-5">Hire this Speaker</a>
+         </div>
+      </section>
+
+      <section>
+         <div class="container">
+            <hr class="mb-5">
+            <h3 class="nota-title mt-5 mb-4">Experiences offered</h3>
+
+            <div class="row">
+
+               <div class="col-sm-6 col-xl-4">
+                  <a href="../experience/">
+                     <div class="experience-card">
+                        <div class="experience-card-photo" style="background-image: url(../resources/img/experience-photo.jpg)"></div>
+                        <div class="experience-card-info">
+                           <h6 class="experience-card-title">Unmasking Microaggressions: An interactive Discussion
+                           </h6>
+                           <p class="experience-card-excerpt">During this interactive experience, participants
+                              will become more aware of how their biases impact interactions</p>
+                           <div class="experience-card-author-container mt-3 pt-3">
+                              <img src="https://notainclusion.com/assets/img/about/a3.png" alt="">
+                              <div>
+                                 <small>With</small>
+                                 <p class="experience-card-author"><strong>Dr. Ryan Warner</strong> (he/him)</p>
+                                 <p class="experience-card-titles">Psychologist, Military Veteran</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+               <div class="col-sm-6 col-xl-4">
+                  <a href="../experience/">
+                     <div class="experience-card">
+                        <div class="experience-card-photo" style="background-image: url(../resources/img/experience-photo.jpg)"></div>
+                        <div class="experience-card-info">
+                           <h6 class="experience-card-title">Unmasking Microaggressions: An interactive Discussion
+                           </h6>
+                           <p class="experience-card-excerpt">During this interactive experience, participants
+                              will become more aware of how their biases impact interactions</p>
+                           <div class="experience-card-author-container mt-3 pt-3">
+                              <img src="https://notainclusion.com/assets/img/about/a3.png" alt="">
+                              <div>
+                                 <small>With</small>
+                                 <p class="experience-card-author"><strong>Dr. Ryan Warner</strong> (he/him)</p>
+                                 <p class="experience-card-titles">Psychologist, Military Veteran</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </a>
+               </div>
+
+            </div>
+         </div>
+      </section>
+   </main>
+
+   <?php include "../layout/footer.php"; ?>
+   <?php include "../layout/assets.php"; ?>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+   <script type="text/javascript">
+      $(".testimonials-carousel").slick({
+         centerMode: true,
+         centerPadding: '300px',
+         infinite: true,
+         arrows: true,
+         autoplay: true,
+         autoplaySpeed: 3000,
+         speed: 500,
+         slidesToShow: 1,
+         slidesToScroll: 1,
+         prevArrow: '<i class="fa-solid fa-arrow-left-long"></i>',
+         nextArrow: '<i class="fa-solid fa-arrow-right-long"></i>',
+         responsive: [{
+               breakpoint: 1025,
+               settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '150px',
+                  slidesToShow: 1
+               }
+            },
+            {
+               breakpoint: 769,
+               settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '150px',
+                  slidesToShow: 1
+               }
+            },
+            {
+               breakpoint: 480,
+               settings: {
+                  arrows: false,
+                  centerMode: true,
+                  centerPadding: '0px',
+                  slidesToShow: 1
+               }
             }
-
-            var navbarVerticalStyle = window.config.config.phoenixNavbarVerticalStyle;
-            var navbarVertical = document.querySelector('.navbar-vertical');
-            if (navbarVertical && navbarVerticalStyle === 'darker') {
-                navbarVertical.classList.add('navbar-darker');
-            }
-        </script>
-
-    </main>
-
-    <!-- assets -->
-    <!-- <link href="../vendors/dropzone/dropzone.min.css" rel="stylesheet"> -->
-    <script src="../vendors/dropzone/dropzone.min.js"></script>
-    <? include('../layout/assets.php'); ?>
-    <script src="../vendors/tinymce/tinymce.min.js"></script>
-    <link href="../vendors/choices/choices.min.css" rel="stylesheet">
-    <script src="../vendors/choices/choices.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="../js/speakers.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready( function(){
-            $(".select2-tags").select2({
-                tags: true,
-                tokenSeparators: [',']
-            });
-        });
-    </script>
+         ]
+      });
+   </script>
 
 </body>
 

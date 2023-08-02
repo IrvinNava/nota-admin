@@ -1,10 +1,19 @@
-<footer class="footer position-absolute">
-  <div class="row g-0 justify-content-between align-items-center h-100">
-    <div class="col-12 col-sm-auto text-center">
-      <p class="mb-0 mt-2 mt-sm-0 text-900">Proposal Admin<span class="d-none d-sm-inline-block"></span><span class="d-none d-sm-inline-block mx-1">|</span><br class="d-sm-none" />2023 &copy;<a class="mx-1" href="https://notainclusion.com/" target="_blank">Notainclusion</a></p>
+<footer>
+    <div class="container">
+        <div class="row py-4">
+            <div class="col-md-8">
+                <div class="text-center text-md-start">
+                    <img src="https://notainclusion.com/wp-content/uploads/2023/06/logo.png" width="120">
+                    <p class="mt-4">© 2023 NOTA Inclusion. All Rights Reserved | <a href="">Terms of service</a> | <a href="">Privacy policy</a></p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="footer-social d-flex justify-content-center justify-content-md-end mt-3 mt-md-0">
+                    <a href="https://www.facebook.com/notainclusion/" class="social-link"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/notainclusion/" class="social-link"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/nota-inclusion/" class="social-link"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-12 col-sm-auto text-center">
-      <p class="mb-0 text-600">v1.11.0</p>
-    </div>
-  </div>
 </footer>

@@ -177,11 +177,13 @@ textarea::-webkit-scrollbar-thumb:hover {
 
 /* Videos */
 .video-item,
-.testimonial-item {
+.testimonial-item,
+.key-item {
     position: relative;
 }
 .video-item .remove-video,
-.testimonial-item .remove-testimonial {
+.testimonial-item .remove-testimonial,
+ .key-item .remove-key {
     position: absolute;
     top: 0;
     right: 0;
@@ -193,6 +195,10 @@ textarea::-webkit-scrollbar-thumb:hover {
 .testimonial-item .remove-testimonial {
     top: -1px;
     right: -1px;
+}
+.key-item .remove-key {
+    padding: 10px 12px;
+    border-radius: 0 5px 5px 0;
 }
 .tab-content .tab-pane {
     min-height: 208px;
@@ -220,4 +226,10 @@ textarea::-webkit-scrollbar-thumb:hover {
 .dark .select2-container--default .select2-selection--multiple {
     background-color: #141824;
     border: 1px solid #373e53 !important;
+}
+
+/* Theme */
+
+.btn-close {
+    background-size: 12px;
 }

@@ -7,7 +7,7 @@
     </script>
     <div class="collapse navbar-collapse" id="navbarVerticalCollapse">
         <!-- scrollbar removed-->
-        <div class="navbar-vertical-content">
+        <div class="navbar-vertical-content pt-0">
             <ul class="navbar-nav flex-column" id="navbarVerticalNav">
 
                 <li class="nav-item">
@@ -88,7 +88,7 @@
                     <hr class="navbar-vertical-line" />
                     <!-- item-->
                     <div class="nav-item-wrapper">
-                        <a id="menuWorkshop" class="nav-link label-1" href="../in-construction/" role="button" data-bs-toggle="" aria-expanded="false">
+                        <a id="menuExperiences" class="nav-link label-1" href="../experiences/" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><span data-feather="box"></span></span>
                                 <span class="nav-link-text-wrapper"><span class="nav-link-text">Experiences</span></span>
@@ -97,7 +97,7 @@
                     </div>
                     <!-- item-->
                     <div class="nav-item-wrapper">
-                        <a id="menuNewWorkshop" class="nav-link label-1" href="../in-construction/" role="button" data-bs-toggle="" aria-expanded="false">
+                        <a id="menuNewExperience" class="nav-link label-1" href="../add-experience/" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><span data-feather="plus-circle"></span></span>
                                 <span class="nav-link-text-wrapper"><span class="nav-link-text">New</span></span>
@@ -112,7 +112,7 @@
                     <hr class="navbar-vertical-line" />
                     <!-- item-->
                     <div class="nav-item-wrapper">
-                        <a id="menuWorkshop" class="nav-link label-1" href="../collections/" role="button" data-bs-toggle="" aria-expanded="false">
+                        <a id="menuCollections" class="nav-link label-1" href="../collections/" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><span data-feather="folder"></span></span>
                                 <span class="nav-link-text-wrapper"><span class="nav-link-text">Collections</span></span>
@@ -121,7 +121,7 @@
                     </div>
                     <!-- item-->
                     <div class="nav-item-wrapper">
-                        <a id="menuNewWorkshop" class="nav-link label-1" href="../add-collection/" role="button" data-bs-toggle="" aria-expanded="false">
+                        <a id="menuNewCollection" class="nav-link label-1" href="../add-collection/" role="button" data-bs-toggle="" aria-expanded="false">
                             <div class="d-flex align-items-center">
                                 <span class="nav-link-icon"><span data-feather="plus-circle"></span></span>
                                 <span class="nav-link-text-wrapper"><span class="nav-link-text">New</span></span>

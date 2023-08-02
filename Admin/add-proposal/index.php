@@ -21,7 +21,7 @@
                     <div class="row g-3 flex-between-end mb-5">
                         <div class="col-auto">
                             <h2 class="mb-2">New proposal</h2>
-                            <h5 class="text-700 fw-semi-bold">Orders placed across your store</h5>
+                            <!-- <h5 class="text-700 fw-semi-bold"></h5> -->
                         </div>
                         <div class="col-auto">
                             <a id="discardProposal" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0" type="button"><i class="fas fa-trash me-1"></i>  Discard</a>

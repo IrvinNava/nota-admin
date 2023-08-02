@@ -2,7 +2,7 @@
 <html lang="en-US" dir="ltr">
 <? include('../layout/header.php'); ?>
 
-<body data-sidebar="menuNewSpeaker">
+<body data-sidebar="">
 
     <!-- ===============================================-->
     <!--    Main Content-->
@@ -19,18 +19,22 @@
                     <ol class="breadcrumb mb-0">
                         <li class="breadcrumb-item"><a href="../home/">Home</a></li>
                         <li class="breadcrumb-item"><a href="../speakers/">Speakers</a></li>
-                        <li class="breadcrumb-item active">New</li>
+                        <li class="breadcrumb-item active">Ingrid Harb</li>
                     </ol>
                 </nav>
                 <form class="mb-9 mt-3">
                     <div class="row g-3 flex-between-end mb-5">
                         <div class="col-auto">
-                            <h2 class="mb-2">New speaker</h2>
-                            <h5 class="text-700 fw-semi-bold">Orders placed across your store</h5>
+                            <h2 class="mb-2">Ingrid Harb</h2>
+                            <h5 class="text-700 fw-semi-bold">Nota's speaker</h5>
                         </div>
-                        <div class="col-auto">
-                            <a id="saveSpeaker" class="btn btn-phoenix-primary me-2 mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="save"></i> Save draft</a>
-                            <a id="publishSpeaker" class="btn btn-primary mb-2 mb-sm-0"><i class="me-1 fs--1" data-feather="check"></i> Publish speaker</a>
+                        <div class="col-auto d-flex align-items-center">
+                            <div class="form-check form-switch me-3">
+                                <input class="form-check-input" id="speakerStatus" type="checkbox" checked>
+                                <label class="form-check-label" for="speakerStatus">Active</label>
+                            </div>
+                            <a id="discardSpeaker" class="btn btn-phoenix-secondary me-2 mb-2 mb-sm-0"><i class="fas fa-trash me-1"></i> Delete</a>
+                            <a id="updateSpeaker" class="btn btn-primary mb-2 mb-sm-0"> Update</a>
                         </div>
                     </div>
                     <div class="row g-5">
@@ -39,27 +43,25 @@
                             <div class="row">
                                 <div class="col-12">
                                     <h4 class="mb-3">Name</h4>
-                                    <input id="speaker_name" name="speaker_name" class="form-control mb-5" type="text" placeholder="Write the name here..." />
+                                    <input id="edit_speaker_name" name="edit_speaker_name" class="form-control mb-5" type="text" placeholder="Write the name here..." />
                                 </div>
 
                                 <div class="col-md-8 mb-5">
                                     <h4 class="mb-2">Speaker titles</h4>
-                                    <input id="speaker_titles" name="speaker_titles" class="form-control mb-0" type="text" placeholder="e.g. Author, Psychologist, etc..." />
+                                    <input id="edit_speaker_titles" name="edit_speaker_titles" class="form-control mb-0" type="text" placeholder="e.g. Author, Psychologist, etc..." />
                                     <small>Add titles separate with coma (,)</small>
                                 </div>
 
                                 <div class="col-md-4 mb-5">
                                     <h4 class="mb-2">Pronouns</h4>
-                                    <input id="speaker_titles" name="speaker_titles" class="form-control mb-0" type="text" placeholder="e.g. She/Her" />
+                                    <input id="edit_speaker_pronouns" name="edit_speaker_pronouns" class="form-control mb-0" type="text" placeholder="e.g. She/Her" />
                                     <small>Add pronouns separate with diagonal (/)</small>
                                 </div>
                             </div>
 
-
-
                             <div class="mb-6">
                                 <h4 class="mb-3"> Speaker description</h4>
-                                <textarea class="tinymce" id="speaker_description" name="speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'></textarea>
+                                <textarea class="tinymce" id="edit_speaker_description" name="edit_speaker_description" data-tinymce='{"height":"15rem","placeholder":"Write the description here..."}'>Ingrid never really fit in a box or category. She was born and raised in Mexico and then went to Texas for boarding school. So at time, she was too Mexican for the norms of an American boarding school. And in returning to Mexico, she was almost too American for her Mexican colleagues. Either she was Mexican or she was an American.</textarea>
                             </div>
 
                             <div class="mb-6">
@@ -82,7 +84,7 @@
 
                                     </div>
                                     <div class="col-sm-8">
-                                        <div class="tab-content py-3 ps-sm-4 ">
+                                        <div class="tab-content py-3 ps-sm-4 h-100">
 
                                             <div class="tab-pane fade h-100 show active pe-3" id="videosTabContent" role="tabpanel" aria-labelledby="videosTab">
                                                 <div class="d-flex flex-column h-100">
@@ -106,8 +108,8 @@
                                                 </div>
                                                 <div id="testimonialsList" class="mt-3">
                                                     <div class="card p-2 testimonial-item mb-2">
-                                                        <textarea class="form-control speaker-item-testimonial" name="speaker_item_testimonial" rows="4" cols="80" placeholder="Testimonial text..."></textarea>
-                                                        <input type="text" id="speaker_item_author" name="speaker_item_author" class="form-control speaker-item-author" placeholder="Testimonial author">
+                                                        <textarea class="form-control" name="speaker_item_testimonial" rows="4" cols="80" placeholder="Testimonial text..."></textarea>
+                                                        <input type="text" name="speaker_item_author" class="form-control" placeholder="Testimonial autor">
                                                         <a href="javascript:void(0);" class="btn btn-soft-danger remove-testimonial" type="button"><span class="fa-solid fa-trash fs--"></span></a>
                                                     </div>
                                                 </div>
@@ -120,10 +122,10 @@
 
                             <div class="mb-6">
                                 <h4 class="mb-3"> Categories</h4>
-                                <select class="form-select select2" id="speaker_categories" name="speaker_categories[]" multiple="multiple" style="width:100%;">
-                                    <option value="">DE&I (Diversity, Equity, & Inclusion)</option>
+                                <select class="form-select select2" id="edit_speaker_categories" name="edit_speaker_categories[]" multiple="multiple" style="width:100%;">
+                                    <option value="" selected>DE&I (Diversity, Equity, & Inclusion)</option>
                                     <option value="">Racial Equity</option>
-                                    <option value="">Mental Health</option>
+                                    <option value="" selected>Mental Health</option>
                                     <option value="">Disability Awareness</option>
                                     <option value="">Intersectionality</option>
                                     <option value="">Allyship</option>
@@ -131,7 +133,7 @@
                                     <option value="">Leadership</option>
                                     <option value="">LGBTQIA+ Pride Month</option>
                                     <option value="">Women's History Month</option>
-                                    <option value="">Black History Month</option>
+                                    <option value="" selected>Black History Month</option>
                                     <option value="">Hispanic Heritage Month</option>
                                     <option value="">Asian American and Pacific Island Heritage Month</option>
                                     <option value="">Military Family Month</option>
@@ -152,7 +154,6 @@
                                     <option value="">Business leadership + management</option>
                                 </select>
                             </div>
-
                         </div>
 
                         <div class="col-12 col-xl-4">
@@ -167,29 +168,40 @@
                                                     <div class="row g-3">
                                                         <div class="col-6">
                                                             <div class="input-group mb-3">
-                                                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-dollar-sign"></i></span>
-                                                                <input type="text" class="form-control" id="price_from" name="price_from" placeholder="From:" aria-describedby="basic-addon1">
+                                                                <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                                                                <input type="text" class="form-control" id="edit_price_from" name="edit_price_from" placeholder="From:" aria-describedby="basic-addon1">
                                                             </div>
                                                         </div>
                                                         <div class="col-6">
                                                             <div class="input-group mb-3">
-                                                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-dollar-sign"></i></span>
-                                                                <input type="text" class="form-control" id="price_to" name="price_to" placeholder="To:" aria-describedby="basic-addon1">
+                                                                <span class="input-group-text"><i class="fa-solid fa-dollar-sign"></i></span>
+                                                                <input type="text" class="form-control" id="edit_price_to" name="edit_price_to" placeholder="To:" aria-describedby="basic-addon1">
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="col-12 col-sm-6 col-xl-12">
-                                                    <h5 class="mb-2 text-1000">Tags</h5>
-                                                    <select id="speaker_tags" name="speaker_tags" class="form-control form-control-sm select2-tags" multiple="multiple" style="width:100%;"></select>
-                                                    <small>Add tags separate with coma (,). This tags will be appear under speaker photo</small>
-                                                </div>
-                                                <div class="col-12 col-sm-6 col-xl-12">
-                                                    <div class="d-flex flex-wrap mb-2">
-                                                        <h5 class="mb-0 text-1000 me-2">Quote</h5>
+                                                    <div class="mb-xl-4">
+                                                        <h5 class="mb-2 text-1000">Tags</h5>
+                                                        <select id="edit_speaker_tags" name="edit_speaker_tags" class="form-control form-control-sm select2-tags" multiple="multiple" style="width:100%;">
+                                                            <option value="" selected>TEDx Speaker</option>
+                                                            <option value="" selected>Founder and CEO</option>
+                                                            <option value="" selected>Global DE&I leader</option>
+                                                            <option value="" selected>Consultant</option>
+                                                            <option value="" selected>Keynote Speaker</option>
+                                                        </select>
+                                                        <small>Add tags separate with coma (,). This tags will be appear under speaker photo</small>
                                                     </div>
-                                                    <textarea class="form-control" id="speaker_quote" name="speaker_quote" rows="4" cols="80"></textarea>
-                                                    <small>Without the quotes.</small>
+                                                </div>
+
+                                                <div class="col-12 col-sm-6 col-xl-12">
+                                                    <div class="">
+                                                        <div class="d-flex flex-wrap mb-2">
+                                                            <h5 class="mb-0 text-1000 me-2">Quote</h5>
+                                                        </div>
+                                                        <textarea class="form-control" id="edit_speaker_quote" name="edit_speaker_quote" rows="6" cols="80">I was born to change the narrative and as long as I live, I will continue to empower women internationally and locally to pursue their career goals regardless of social, economic, racial or cultural background.</textarea>
+                                                        <small>Without the quotes.</small>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -200,9 +212,9 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title mb-4">Speaker photo</h4>
-                                            <div class="dropzone dropzone-multiple p-0 mb-5" id="my-awesome-dropzone" data-dropzone="data-dropzone">
+                                            <div class="dropzone dropzone-multiple p-0 mb-3" id="my-awesome-dropzone" data-dropzone="data-dropzone">
                                                 <div class="fallback">
-                                                    <input id="speaker_photo" name="speaker_photo" type="file" multiple="multiple" />
+                                                    <input id="edit_speaker_photo" name="edit_speaker_photo" type="file" multiple="multiple" />
                                                 </div>
                                                 <div class="dz-preview d-flex flex-wrap">
                                                     <div class="border bg-white rounded-3 d-flex flex-center position-relative me-2 mb-2" style="height:80px;width:80px;">
@@ -214,6 +226,11 @@
                                                     <button class="btn btn-link p-0" type="button">Browse from device</button><br /><img class="mt-3 me-2" src="../../../assets/img/icons/image-icon.png" width="40" alt="" />
                                                 </div>
                                             </div>
+
+                                            <div class="alert alert-soft-primary px-3 py-2" role="alert">
+                                                <small><i class="" data-feather="info"></i> Recommended measurements: 420x600</small>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -252,6 +269,7 @@
     <script src="../vendors/choices/choices.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script src="../js/speakers.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function() {
