@@ -10,6 +10,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    overflow-x: hidden;
 }
 
 .background {
@@ -34,19 +35,24 @@ a {
     text-align: left;
     border-radius: 10px;
 }
+
 .btn-blue:hover,
 .btn-purple:hover {
     color: #fff;
 }
+
 .btn-blue {
     background-color: #223e6d;
 }
+
 .btn-blue:hover {
     background-color: #334f7f;
 }
+
 .btn-purple {
     background-color: var(--nota-color-purple);
 }
+
 .btn-purple:hover {
     background-color: #ab55fd;
 }
@@ -578,11 +584,13 @@ section {
     transform: scale(1);
     transition: 0.3s ease-in-out all;
 }
+
 .slick-slide.slick-center {
     opacity: 1;
     transform: scale(1.08);
     transition: all .5s;
 }
+
 .testimonials-carousel:after,
 .testimonials-carousel:before {
     content: "";
@@ -593,10 +601,12 @@ section {
     width: 12%;
     z-index: 100;
 }
+
 .testimonials-carousel:after {
     right: 0;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, #ffffff 100%);
 }
+
 .testimonials-carousel:before {
     background: linear-gradient(to right, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
 }
@@ -613,9 +623,9 @@ section {
 
 .experience-cover-content {
     background-image: url(https://notainclusion.com/wp-content/uploads/2023/07/nota-bg-vertical.svg),
-    linear-gradient(0deg,rgba(0,0,0,1) 0%,rgba(0,0,0,0) 90%,rgba(0,0,0,0) 100%);
+        linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 90%, rgba(0, 0, 0, 0) 100%);
     background-size: 150px, auto;
-    background-repeat: no-repeat,no-repeat;
+    background-repeat: no-repeat, no-repeat;
     background-position: top right;
     padding: 80px 50px;
     color: #fff;
@@ -661,6 +671,95 @@ section {
 
 .experience-takeaways p {
     margin: 0;
+}
+
+.section-title h1,
+.section-title h2,
+.section-title h4 {
+    font-family: 'Poppins',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 800 !important;
+    color: #223e6d;
+    text-align: center;
+}
+
+.section-title h2 {
+    font-weight: 800 !important;
+}
+
+.section-title h4 {
+    font-weight: 600 !important;
+}
+
+.nota-text-gradient {
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(132deg,#a027ff,#4b9aff 49%,#00f0ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+/*--------------------------------------------------------------
+# Clients
+--------------------------------------------------------------*/
+.clients {
+    overflow-x: hidden;
+}
+
+@keyframes marqueeLeft {
+    0% {
+        left: 0
+    }
+
+    100% {
+        left: -50%
+    }
+}
+
+.marquee_row {
+    height: 70px;
+    width: 100%;
+}
+
+.marquee_parent {
+    width: 100vw;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+}
+
+.marquee-block {
+    height: 70px;
+    width: calc(9000px);
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.marquee-inner {
+    display: block;
+    width: 100%;
+    position: absolute;
+    animation: marqueeLeft 50s linear infinite;
+}
+
+.marquee-inner span {
+    float: left;
+}
+
+.marquee-item {
+    height: 70px;
+    width: 170px;
+    display: inline-block;
+    padding: 15px;
+    box-sizing: border-box;
+    float: left;
+    transition: all .2s ease-out;
+}
+
+.marquee-item img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
 }
 
 /* Footer */
@@ -731,6 +830,7 @@ footer a {
         width: 70px;
         height: 70px;
     }
+
     .experience-cover-content {
         background-size: 80px, auto;
         background-position: bottom right;
@@ -755,6 +855,7 @@ footer a {
         margin-left: 10px;
         margin-right: 10px;
     }
+
     .experience-cover-content {
         background-size: 90px, auto;
         background-position: top right;

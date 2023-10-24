@@ -11,10 +11,16 @@
                     <a class="nav-link active" aria-current="page" href="https://notainclusion.com/">Home</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link active" href="../experiences/">Experiences</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link active" href="../talent/">Find Talent</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="https://notainclusion.com/solution/">Solution</a>
+                    <a class="nav-link" href="https://notainclusion.com/solution/">Inclusive Thinking</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="../proposal/">Join Us</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://notainclusion.com/about/">About</a>

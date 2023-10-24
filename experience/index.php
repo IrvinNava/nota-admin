@@ -18,7 +18,7 @@
       <section>
          <div class="container">
             <div class="d-flex justify-content-start mb-4">
-               <a href="../talent/" class="go-back-btn"><i class="fa-solid fa-chevron-left me-2"></i> Go Back</a>
+               <a href="../experiences/" class="go-back-btn"><i class="fa-solid fa-chevron-left me-2"></i> Go Back</a>
             </div>
 
             <div class="row">
