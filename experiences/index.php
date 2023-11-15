@@ -23,7 +23,7 @@
                <div class="collections-carousel">
 
                   <div class="item">
-                     <a href="#">
+                     <a href="../collection/">
                         <div class="collection-card" style="background-image: url(https://notainclusion.com/assets/img/speaker/dena-simmons.png)">
                            <div class="collection-info">
                               <h3 class="collection-title">Hispanic Heritage Month</h3>
@@ -35,7 +35,7 @@
                   </div>
 
                   <div class="item">
-                     <a href="#">
+                     <a href="../collection/">
                         <div class="collection-card" style="background-image: url(https://notainclusion.com/assets/img/speaker/dena-simmons.png)">
                            <div class="collection-info">
                               <h3 class="collection-title">Black History Month</h3>
@@ -47,7 +47,7 @@
                   </div>
 
                   <div class="item">
-                     <a href="#">
+                     <a href="../collection/">
                         <div class="collection-card" style="background-image: url(https://notainclusion.com/assets/img/speaker/dena-simmons.png)">
                            <div class="collection-info">
                               <h3 class="collection-title">Pride Month</h3>
@@ -59,7 +59,7 @@
                   </div>
 
                   <div class="item">
-                     <a href="#">
+                     <a href="../collection/">
                         <div class="collection-card" style="background-image: url(https://notainclusion.com/assets/img/speaker/dena-simmons.png)">
                            <div class="collection-info">
                               <h3 class="collection-title">DEI Elementals</h3>
@@ -71,7 +71,7 @@
                   </div>
 
                   <div class="item">
-                     <a href="#">
+                     <a href="../collection/">
                         <div class="collection-card" style="background-image: url(https://notainclusion.com/assets/img/speaker/dena-simmons.png)">
                            <div class="collection-info">
                               <h3 class="collection-title">DEI Elementals</h3>
@@ -83,7 +83,7 @@
                   </div>
 
                   <div class="item">
-                     <a href="#">
+                     <a href="../collection/">
                         <div class="collection-card" style="background-image: url(https://notainclusion.com/assets/img/speaker/dena-simmons.png)">
                            <div class="collection-info">
                               <h3 class="collection-title">DEI Elementals</h3>
